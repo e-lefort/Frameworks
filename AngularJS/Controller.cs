@@ -34,6 +34,15 @@ namespace Bridge.AngularJS
         {
         }
 
+        /// <summary>
+        /// Drops the NG controller from the specified element.
+        /// </summary>
+        /// <param name="el">Element to drop the ngController from.</param>
+        [Template("{el}.removeAttribute('ng-controller')")]
+        public static void dropNGController(this Element el)
+        {
+        }
+
         // TODO: support instance of the controller referenced/cycled thru
         //       the module's controller list
     }

@@ -48,6 +48,15 @@ namespace Bridge.AngularJS
         }
 
         /// <summary>
+        /// Removes the binding of the module to the page's node if any.
+        /// </summary>
+        /// <param name="el">Element to have the module unbound from</param>
+        [Template("{el}.removeAttribute('ng-app')")]
+        public static void dropNGApp(this Element el)
+        {
+        }
+
+        /// <summary>
         /// Binds the module to the page's node. Its scope will extend to any
         /// node inside this, so as controllers will be available at this point
         /// and deeper and not outside it. (adds ng-app= to the HTML element)
