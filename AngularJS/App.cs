@@ -13,20 +13,23 @@ namespace Bridge.AngularJS
         /// Initializes a new AngularJS module with the specified name and no
         /// other modules dependencies.
         /// </summary>
-        /// <param name="angularAppName">Name of the module name (ng-app)</param>
+        /// <param name="angularAppName">Name of the module name (ngApp)</param>
         [Template("angular.module({angularAppName}, [])")]
         public AngularJSApp(string angularAppName)
         {
         }
 
         /// <summary>
-        /// Initializes a new AngularJS module with the specified name and list of
-        /// modules it depends on.
+        /// Initializes a new AngularJS module with the specified name and list 
+        /// of modules it depends on.
         /// </summary>
-        /// <param name="angularAppName">Name of the module name (ng-app)</param>
-        /// <param name="dependencies">List of module names this module depends on</param>
+        /// <param name="angularAppName">Name of the module name (ngApp)</param>
+        /// <param name="dependencies">
+        /// List of module names this module depends on
+        /// </param>
         [Template("angular.module({angularAppName}, {controllers})")]
-        public AngularJSApp(string angularAppName, IEnumerable<string> dependencies)
+        public AngularJSApp(string angularAppName,
+            IEnumerable<string> dependencies)
         {
         }
     }

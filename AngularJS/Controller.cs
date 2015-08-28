@@ -6,18 +6,20 @@ namespace Bridge.AngularJS
     public partial class AngularJSApp
     {
         /// <summary>
-        /// Set up the module's controller copying the specified object's elements
-        /// to its scope.
+        /// Set up the module's controller copying the specified object's 
+        /// elements to its scope.
         /// </summary>
         /// <param name="name">Name for the controller (ng-controller)</param>
         /// <param name="data">Data to map to the controller's scope</param>
-        [Template("{this}.controller({name}, ['$scope', function ($scope) { for (var key in {data:raw}) $scope[key] = {data:raw}[key] }])")]
+        [Template("{this}.controller({name}, ['$scope', function ($scope) { " +
+            "for (var key in {data:raw}) $scope[key] = {data:raw}[key] }])")]
         public void Controller(string name, object data)
         {
         }
 
-        //TODO: a way to specify the controller like it is done in AngularJS native,
-        //      providing a function($scope) { $scope.foo = "foo"; $scope.bar = "bar" }
+        //TODO: a way to specify the controller like it is done in AngularJS 
+        //      native, providing a
+        //      function($scope) { $scope.foo = "foo"; $scope.bar = "bar" }
     }
 
     //[Ignore] set on main definition

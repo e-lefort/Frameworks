@@ -25,7 +25,8 @@ namespace Bridge.AngularJS
         /// <param name="variable">Iteration variable</param>
         /// <param name="array">Existing array in the scoped controller.</param>
         /// <remarks>Must be used inside a ngController scope</remarks>
-        [Template("{el}.setAttribute('ng-repeat', '{variable:raw} in {array:raw}')")]
+        [Template("{el}.setAttribute('ng-repeat', " +
+            "'{variable:raw} in {array:raw}')")]
         public static void setNGRepeat(this Element el, string variable,
             string array)
         {
@@ -43,13 +44,16 @@ namespace Bridge.AngularJS
         /// Must be used inside a ngController scope and input field for filter
         /// must be defined somewhere else in the page
         /// </remarks>
-        [Template("{el}.setAttribute('ng-repeat', '{variable:raw} in {array:raw} | filter:{filterInputField:raw}')")]
+        [Template("{el}.setAttribute('ng-repeat', " +
+                  "'' + {variable} + ' in ' + {array} + ' | " +
+                  "filter:' + {filterInputField})")]
         public static void setNGRepeat(this Element el, string variable,
             string array, string filterInputField)
         {
         }
 
-        [Template("{el}.setAttribute('ng-repeat', '{variable:raw} in {array:raw} | " +
+        [Template("{el}.setAttribute('ng-repeat', " +
+                  "'{variable:raw} in {array:raw} | " +
                   "filter: ' + {filterInputField} + ' | " +
                   "orderBy: ' + {orderByInputField})")]
         public static void setNGRepeat(this Element el, string variable,
