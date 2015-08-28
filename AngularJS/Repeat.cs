@@ -49,6 +49,14 @@ namespace Bridge.AngularJS
         {
         }
 
+        [Template("{el}.setAttribute('ng-repeat', '{variable:raw} in {array:raw} | " +
+                  "filter: ' + {filterInputField} + ' | " +
+                  "orderBy: ' + {orderByInputField})")]
+        public static void setNGRepeat(this Element el, string variable,
+            string array, string filterInputField, string orderByInputField)
+        {
+        }
+
         /// <summary>
         /// Drops the NG repeat from the specified element.
         /// </summary>
