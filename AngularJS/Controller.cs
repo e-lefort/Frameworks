@@ -1,4 +1,5 @@
 ﻿using Bridge.Html5;
+using System;
 
 namespace Bridge.AngularJS
 {
@@ -17,9 +18,27 @@ namespace Bridge.AngularJS
         {
         }
 
-        //TODO: a way to specify the controller like it is done in AngularJS 
-        //      native, providing a
-        //      function($scope) { $scope.foo = "foo"; $scope.bar = "bar" }
+        //FIXME: if T is an object with properties (get/set), it tries to bind
+        //       the values thru .set<prop>() and no value gets bound to the
+        //       controller.
+        /// <summary>
+        /// Binds to the controller the specified name and function.
+        /// Broken due to limitations on Bridge and Properties.
+        /// </summary>
+        /// <param name="name">Name.</param>
+        /// <param name="function">
+        /// Function. Must have a $-prefixed parameter.
+        /// </param>
+        /// <typeparam name="T">The Model reference.</typeparam>
+        [Template("{this}.controller({name}, {function})")]
+        public void Controller<T>(string name, Action<T> function)
+        {
+        }
+
+        //TODO: An overload with the second parameter as:
+        //      1. function($scope, $http)
+        //      2. ['$scope', function($scope)]
+        //      3. ['$scope', '$http', function ($scope, http)]
     }
 
     //[Ignore] set on main definition
