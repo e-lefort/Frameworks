@@ -13,7 +13,7 @@ namespace Bridge.AngularJS
         /// <param name="expression">Valid ngRepeat AngularJS expression</param>
         /// <remarks>Must be used inside a ngController scope</remarks>
         [Template("{el}.setAttribute('ng-repeat', {expression})")]
-        public static void setNGRepeat(this Element el, string expression)
+        public static void SetNGRepeat(this Element el, string expression)
         {
         }
 
@@ -27,11 +27,13 @@ namespace Bridge.AngularJS
         /// <remarks>Must be used inside a ngController scope</remarks>
         [Template("{el}.setAttribute('ng-repeat', " +
             "'' + {variable} + ' in ' + {array})")]
-        public static void setNGRepeat(this Element el, string variable,
+        public static void SetNGRepeat(this Element el, string variable,
             string array)
         {
         }
 
+        // FIXME: There are much more over Filter and OrderBy. Another approach
+        //        will have to be taken.
         /// <summary>
         /// Sets the NG repeat to the element with the specified iteration
         /// variable, iterated array and filter input field.
@@ -47,7 +49,7 @@ namespace Bridge.AngularJS
         [Template("{el}.setAttribute('ng-repeat', " +
                   "'' + {variable} + ' in ' + {array} + ' | " +
                   "filter:' + {filterInputField})")]
-        public static void setNGRepeatWithFilter(this Element el,
+        public static void SetNGRepeatWithFilter(this Element el,
             string variable, string array, string filterInputField)
         {
         }
@@ -70,7 +72,7 @@ namespace Bridge.AngularJS
                   "'' + {variable} + ' in ' + {array} + ' | " +
                   "filter: ' + {filterInputField} + ' | " +
                   "orderBy: ' + {orderByInputField})")]
-        public static void setNGRepeat(this Element el, string variable,
+        public static void SetNGRepeat(this Element el, string variable,
             string array, string filterInputField, string orderByInputField)
         {
         }
@@ -86,7 +88,7 @@ namespace Bridge.AngularJS
         [Template("{el}.setAttribute('ng-repeat', " +
                   "'' + {variable} + ' in ' + {array} + ' | " +
                   "orderBy: ' + {orderByInputField})")]
-        public static void setNGRepeatWithOrderBy(this Element el,
+        public static void SetNGRepeatWithOrderBy(this Element el,
             string variable, string array, string orderByInputField)
         {
         }
@@ -96,11 +98,11 @@ namespace Bridge.AngularJS
         /// </summary>
         /// <param name="el">Element to drop the ngRepeat from.</param>
         [Template("{el}.removeAttribute('ng-repeat')")]
-        public static void dropNGRepeat(this Element el)
+        public static void RemovepNGRepeat(this Element el)
         {
         }
 
-        // TODO: a way to represent both the loop and filter with actual 
+        // TODO: a way to represent all the modifiers with actual 
         //       variables' references not string variables.
     }
 }
