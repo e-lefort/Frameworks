@@ -43,6 +43,7 @@
     <Compile Include="Angular.cs" />
     <Compile Include="Module.cs" />
     <Compile Include="Auto.cs" />
+    <Compile Include="Animation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Bridge\Bridge\Bridge.csproj">
