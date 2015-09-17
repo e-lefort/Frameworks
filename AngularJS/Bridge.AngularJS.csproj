@@ -44,6 +44,7 @@
     <Compile Include="Module.cs" />
     <Compile Include="Auto.cs" />
     <Compile Include="Animation.cs" />
+    <Compile Include="Route.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Bridge\Bridge\Bridge.csproj">
