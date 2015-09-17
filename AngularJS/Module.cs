@@ -150,12 +150,12 @@ namespace Bridge.AngularJS
         /// <typeparam name="T1">
         /// The model reference.
         /// </typeparam>
-        /// <typeparam name="Services.Http<T2>">
-        /// The type the Http service should expect from jSon requests.
+        /// <typeparam name="T2">
+        /// The additional typed parameter for the service.
         /// </typeparam>
         [Template("{this}.controller({name}, {function})")]
         public void Controller<T1, T2>(string name,
-            Action<T1, Services.Http<T2>> function)
+            Action<T1, T2> function)
         {
         }
 
