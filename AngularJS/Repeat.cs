@@ -3,7 +3,7 @@
 namespace Bridge.AngularJS
 {
     //[Ignore] set on main definition
-    public static partial class AngularJSExtensions
+    public static partial class Directives
     {
         /// <summary>
         /// Sets the NG repeat to the element with the specified free text

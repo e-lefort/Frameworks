@@ -6,7 +6,7 @@ namespace Bridge.AngularJS
     /// Extensions to allow handling AngularJS on pages.
     /// </summary>
     [Ignore]
-    public static partial class AngularJSExtensions
+    public static partial class Directives
     {
         #region ngApp / Module
         /// <summary>
