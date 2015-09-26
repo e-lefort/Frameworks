@@ -102,7 +102,7 @@ namespace Bridge.AngularJS
         {
         }
 
-        // TODO: a way to represent all the modifiers with actual 
+        // TODO: a way to represent all the modifiers with actual
         //       variables' references not string variables.
     }
 }

@@ -160,7 +160,7 @@ namespace Bridge.AngularJS
         }
 
         /// <summary>
-        /// Set up the module's controller copying the specified object's 
+        /// Set up the module's controller copying the specified object's
         /// elements to its scope. Syntax sugar to map objects into a controller.
         /// </summary>
         /// <param name="name">Name for the controller (ng-controller)</param>

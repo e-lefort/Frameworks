@@ -39,7 +39,7 @@ namespace Bridge.AngularJS.Route
     {
         /// <summary>
         /// A boolean property indicating if routes defined using this provider
-        /// should be matched using a case insensitive algorithm. 
+        /// should be matched using a case insensitive algorithm.
         /// </summary>
         public bool CaseInsensitiveMatch = false;
 
