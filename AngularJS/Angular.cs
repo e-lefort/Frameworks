@@ -47,7 +47,7 @@ namespace Bridge.AngularJS
             return default(object);
         }
 
-        public static bool Equals(object o1, object o2)
+        public static new bool Equals(object o1, object o2)
         {
             return default(bool);
         }
