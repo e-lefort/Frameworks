@@ -133,7 +133,7 @@ namespace Bridge.AngularJS
         /// <param name="function">
         /// Function. Must have a $-prefixed parameter.
         /// </param>
-        /// <typeparam name="T">The Model reference.</typeparam>
+        /// <typeparam name="T">The first parameter/service used.</typeparam>
         /// <remarks>
         /// Don't use properties on objects (only fields supported).
         /// </remarks>
@@ -147,15 +147,56 @@ namespace Bridge.AngularJS
         /// </summary>
         /// <param name="name">Name.</param>
         /// <param name="function">Function.</param>
-        /// <typeparam name="T1">
-        /// The model reference.
-        /// </typeparam>
-        /// <typeparam name="T2">
-        /// The additional typed parameter for the service.
-        /// </typeparam>
+        /// <typeparam name="T1">The first parameter/service used.</typeparam>
+        /// <typeparam name="T2">The second parameter/service used.</typeparam>
         [Template("{this}.controller({name}, {function})")]
         public void Controller<T1, T2>(string name,
             Action<T1, T2> function)
+        {
+        }
+
+        /// <summary>
+        /// Binds to the controller the specified name and function.
+        /// </summary>
+        /// <param name="name">Name.</param>
+        /// <param name="function">Function.</param>
+        /// <typeparam name="T1">The first parameter/service used.</typeparam>
+        /// <typeparam name="T2">The second parameter/service used.</typeparam>
+        /// <typeparam name="T3">The third parameter/service used.</typeparam>
+        [Template("{this}.controller({name}, {function})")]
+        public void Controller<T1, T2, T3>(string name,
+            Action<T1, T2, T3> function)
+        {
+        }
+
+        /// <summary>
+        /// Binds to the controller the specified name and function.
+        /// </summary>
+        /// <param name="name">Name.</param>
+        /// <param name="function">Function.</param>
+        /// <typeparam name="T1">The first parameter/service used.</typeparam>
+        /// <typeparam name="T2">The second parameter/service used.</typeparam>
+        /// <typeparam name="T3">The third parameter/service used.</typeparam>
+        /// <typeparam name="T4">The fourth parameter/service used.</typeparam>
+        [Template("{this}.controller({name}, {function})")]
+        public void Controller<T1, T2, T3, T4>(string name,
+            Action<T1, T2, T3, T4> function)
+        {
+        }
+
+        /// <summary>
+        /// Binds to the controller the specified name and function.
+        /// </summary>
+        /// <param name="name">Name.</param>
+        /// <param name="function">Function.</param>
+        /// <typeparam name="T1">The first parameter/service used.</typeparam>
+        /// <typeparam name="T2">The second parameter/service used.</typeparam>
+        /// <typeparam name="T3">The third parameter/service used.</typeparam>
+        /// <typeparam name="T4">The fourth parameter/service used.</typeparam>
+        /// <typeparam name="T5">The fifth parameter/service used.</typeparam>
+        [Template("{this}.controller({name}, {function})")]
+        public void Controller<T1, T2, T3, T4, T5>(string name,
+            Action<T1, T2, T3, T4, T5> function)
         {
         }
 
