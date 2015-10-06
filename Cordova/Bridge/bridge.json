@@ -1,8 +1,7 @@
 {
   "output": "build",
-  "module": "bridge.cordova",
-  "outputBy": "Module"
-
+  "outputBy": "Project",
+  //"module": "bridge.cordova",
   // Uncomment to add TypeScript Definition file (.d.ts) generation to your project.
   // , "generateTypeScript": true
 

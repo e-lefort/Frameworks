@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Bridge;
+using System;
 using System.Collections.Generic;
 
 namespace Bridge.Cordova
 {
     [Enum(Emit.StringNameLowerCase)]
-    [Ignore]
     public enum Events
     {
         DeviceReady,
@@ -20,7 +20,6 @@ namespace Bridge.Cordova
     }
 
     [Enum(Emit.StringNameLowerCase)]
-    [Ignore]
     public enum BatteryStatus
     {
         BatteryCritical,
@@ -29,7 +28,6 @@ namespace Bridge.Cordova
     }
 
     [Enum(Emit.StringNameLowerCase)]
-    [Ignore]
     public enum NetworkInformation
     {
         Online,
@@ -56,10 +54,10 @@ namespace Bridge.Cordova
                 if(instance == null)
                 {
                     instance = Activator.CreateInstance<T>();
-                    AddEventListener(Events.DeviceReady.ToString(), () => {
+                    Application<T>.AddEventListener(Events.DeviceReady.ToString(), () => {
                         instance.OnDeviceReady();
-                        AddEventListener(Events.Pause, instance.OnPause, false);
-                        AddEventListener(Events.Resume, instance.OnResume, false);
+                        Application<T>.AddEventListener(Events.Pause, instance.OnPause, false);
+                        Application<T>.AddEventListener(Events.Resume, instance.OnResume, false);
                     }, false);
                 }
 

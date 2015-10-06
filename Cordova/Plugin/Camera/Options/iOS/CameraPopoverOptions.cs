@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Bridge.Cordova.Plugin.Camera.Options.iOS
 {
-    [Ignore]
     public enum ArrowDir
     {
         ARROW_UP = 1,

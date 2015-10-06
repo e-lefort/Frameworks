@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bridge.Cordova.Plugin.Camera.Options
 {
-    [Ignore]
     public enum CameraDirection
     {
         FRONT = 0,
         BACK = 1,
     }
 
-    [Ignore]
     public enum MediaType
     {
         PICTURE = 0,
@@ -21,14 +19,12 @@ namespace Bridge.Cordova.Plugin.Camera.Options
         ALLMEDIA = 2,
     }
 
-    [Ignore]
     public enum EncodingType
     {
         JPEG = 0,
         PNG = 1,
     }
 
-    [Ignore]
     public enum SourceType
     {
         PHOTOLIBRARY = 0,
@@ -36,7 +32,6 @@ namespace Bridge.Cordova.Plugin.Camera.Options
         SAVEDPHOTOALBUM = 2,
     }
 
-    [Ignore]
     public enum DestinationType
     {
         DATA_URL = 0,
