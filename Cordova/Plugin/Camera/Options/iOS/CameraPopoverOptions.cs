@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bridge.Cordova.Pluging.Camera.Options.iOS
+namespace Bridge.Cordova.Plugin.Camera.Options.iOS
 {
+    [Ignore]
     public enum ArrowDir
     {
         ARROW_UP = 1,

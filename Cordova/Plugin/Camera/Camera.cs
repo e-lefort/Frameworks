@@ -1,9 +1,9 @@
 ﻿using Bridge;
-using Bridge.Cordova.Pluging.Camera.Options;
-using Bridge.Cordova.Pluging.Camera.Options.iOS;
+using Bridge.Cordova.Plugin.Camera.Options;
+using Bridge.Cordova.Plugin.Camera.Options.iOS;
 using System;
 
-namespace Bridge.Cordova.Pluging.Camera
+namespace Bridge.Cordova.Plugin.Camera
 {
     public class CameraOptions
     {

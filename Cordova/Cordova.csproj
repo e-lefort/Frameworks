@@ -34,9 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Application.cs" />
-    <Compile Include="Pluging\Camera\Camera.cs" />
-    <Compile Include="Pluging\Camera\Options\iOS\CameraPopoverOptions.cs" />
-    <Compile Include="Pluging\Camera\Options\Options.cs" />
+    <Compile Include="Plugin\Camera\Camera.cs" />
+    <Compile Include="Plugin\Camera\Options\iOS\CameraPopoverOptions.cs" />
+    <Compile Include="Plugin\Camera\Options\Options.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
