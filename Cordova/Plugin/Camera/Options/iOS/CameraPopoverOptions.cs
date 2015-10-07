@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bridge.Cordova.Plugin.Camera.Options.iOS
 {
+    [Ignore]
     public enum ArrowDir
     {
         ARROW_UP = 1,
@@ -15,6 +16,8 @@ namespace Bridge.Cordova.Plugin.Camera.Options.iOS
         ARROW_ANY = 15,
     }
 
+    [Ignore]
+    [ObjectLiteral]
     public class CameraPopoverOptions
     {
         public int X { get; set; }

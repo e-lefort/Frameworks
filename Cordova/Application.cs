@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace Bridge.Cordova
 {
+    [Ignore]
     [Enum(Emit.StringNameLowerCase)]
     public enum Events
     {
@@ -19,6 +20,7 @@ namespace Bridge.Cordova
         VolumeUpButton
     }
 
+    [Ignore]
     [Enum(Emit.StringNameLowerCase)]
     public enum BatteryStatus
     {
@@ -27,6 +29,7 @@ namespace Bridge.Cordova
         BatteryStatus,
     }
 
+    [Ignore]
     [Enum(Emit.StringNameLowerCase)]
     public enum NetworkInformation
     {
@@ -54,7 +57,7 @@ namespace Bridge.Cordova
                 if(instance == null)
                 {
                     instance = Activator.CreateInstance<T>();
-                    Application<T>.AddEventListener(Events.DeviceReady.ToString(), () => {
+                    Application<T>.AddEventListener(Events.DeviceReady, () => {
                         instance.OnDeviceReady();
                         Application<T>.AddEventListener(Events.Pause, instance.OnPause, false);
                         Application<T>.AddEventListener(Events.Resume, instance.OnResume, false);
@@ -69,9 +72,10 @@ namespace Bridge.Cordova
         {
         }
 
+        [Template("document.addEventListener({0},{1},{2})")]
         public static void AddEventListener(Enum type, Action listener, bool? useCapture)
         {
-            AddEventListener(type.ToString(), listener, useCapture);
+
         }
 
         public abstract void OnDeviceReady();
